@@ -1,4 +1,23 @@
-*{
+/* Progress Bar */
+.progress-bar {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 3px;
+    background-color: #fcb731;
+    /* Initial width is 0 */  
+    transition: width 0.1s linear;
+    z-index: -1;
+    flex: none;
+  }
+  /* Other styles (same as before) */
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+  }
+  
+  *{
     box-sizing: border-box;
 }
 body{
@@ -15,6 +34,7 @@ img{
     padding: 0 20px;
     margin: auto;
 }
+
 .timeline_overflow{
     overflow: hidden;
     grid-column-gap: 9.375vw;
@@ -29,6 +49,12 @@ img{
     display: flex;
     position: sticky;
     top: 0;
+}
+.timeline_collection-list-wrapper{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    position: relative;
 }
 .timeline_collection-list{
     display: flex;
@@ -70,21 +96,3 @@ img{
     width: 30px;
    
 }
-
-/* testing CSS */
-
-.timeline_point.active {
-    opacity: 1;
-    transform: scale(1.1);
-    transition: transform 0.3s, opacity 0.3s;
-  }
-  
-  .timeline_line {
-    position: absolute;
-    bottom: 0;
-    height: 4px;
-    background-color: #3498db;
-    width: 0; /* Start from 0 width */
-    transition: width 0.3s ease-in-out;
-  }
-    
